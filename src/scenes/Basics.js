@@ -56,7 +56,8 @@ class Basics extends Phaser.Scene {
             loop: 1,
             paused: false,
             tween:[{
-                x:
+                x: w - 64,
+                duration: 500
             }]
         })
 
