@@ -55,10 +55,38 @@ class Basics extends Phaser.Scene {
             ease: 'Bounce.easeOut',
             loop: 1,
             paused: false,
-            tween:[{
-                x: w - 64,
-                duration: 500
-            }]
+            tweens:[
+                {
+                    x: w - 64,
+                    duration: 500,
+                    angle: 0
+                    
+                },
+                {
+                    y: h - 64,
+                    duration: 1000,
+                    ease: 'Sine.easeOut',
+                    angle: 90
+                
+                },
+                {
+                    x: 64,
+                    duration: 1500,
+                    angle: 180
+                },
+                {
+                    y: 64,
+                    duration: 1000,
+                    angle: 270
+                }
+        
+            ]
+        })
+
+        //Add mouse Input Listener
+        this.input.on('pointerdown', ()=> {
+            verygoodpear.setPosition(64,64)
+            pearTweenChain.restart()
         })
 
         // enable scene reload key
