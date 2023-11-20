@@ -52,7 +52,12 @@ class Basics extends Phaser.Scene {
         //Create tween chain
         let pearTweenChain = this.tweens.chain({
             targets: verygoodpear,
-            ease
+            ease: 'Bounce.easeOut',
+            loop: 1,
+            paused: false,
+            tween:[{
+                x:
+            }]
         })
 
         // enable scene reload key
